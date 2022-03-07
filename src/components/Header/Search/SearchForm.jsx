@@ -26,7 +26,7 @@ const submitCityName = (event) => {
 export const SearchForm = () => {
   return (
     <StyledSearchForm onSubmit={submitCityName}>
-      <label className="offScreen" role="" htmlFor="search">
+      <label className="offScreen" htmlFor="search">
         Enter City Name.
       </label>
       <SearchInput />
