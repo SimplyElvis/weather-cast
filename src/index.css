@@ -2,12 +2,6 @@
 /* Variables         */
 /* ----------------- */
 :root {
-  /* --color-light: 100 100% 9%; */
-  /* --color-dark: 207 95% 8%; */
-  --color-primary: 353 81% 51%;
-  --color-secondary: 35 100% 55%;
-  --color-accent: 174 62% 47%;
-
   --color-red-00: #ef5778;
   --color-red-01: #ee4469;
   --color-red-02: #ec325a;
@@ -17,6 +11,7 @@
   --color-red-06: #bb1136;
   --color-dark: #161925;
   --color-light: #fdfffc;
+  --color-background: #fef9ef;
 
   --viewport-tablet: 48rem;
   --viewport-laptop: 72rem;
@@ -87,7 +82,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   text-size-adjust: 100%;
-  background-color: var(--color-light);
+  background-color: var(--color-background);
   color: var(--color-dark);
 }
 

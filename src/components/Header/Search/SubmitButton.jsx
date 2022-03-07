@@ -13,8 +13,9 @@ const StyledSubmitButton = styled.button`
   margin-bottom: var(--spacing-base-mobile);
   margin-top: 0;
 
-  :focus-within {
-    background-color: var(--color-red-02);
+  :focus-within,
+  :hover {
+    background-color: var(--color-light);
   }
   :active {
     margin-bottom: 0;
