@@ -1,7 +1,8 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { SearchInput } from "./SearchInput";
 import { SubmitButton } from "./SubmitButton";
-
+import { SearchContext } from "../../../contexts/searchContext";
 import { breakPoint } from "../../utils/breakPoints";
 
 const StyledSearchForm = styled.form`
@@ -18,19 +19,23 @@ const StyledSearchForm = styled.form`
   }
 `;
 
-const submitCityName = (event) => {
-  event.preventDefault();
-  console.log("submitting...");
-};
-
 export const SearchForm = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const submitCityName = (event) => {
+    event.preventDefault();
+    let searchString = searchTerm.trim().toLowerCase();
+  };
+
   return (
-    <StyledSearchForm onSubmit={submitCityName}>
-      <label className="offScreen" role="" htmlFor="search">
-        Enter City Name.
-      </label>
-      <SearchInput />
-      <SubmitButton />
-    </StyledSearchForm>
+    <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
+      <StyledSearchForm onSubmit={submitCityName}>
+        <label className="offScreen" htmlFor="search">
+          Enter City Name.
+        </label>
+        <SearchInput />
+        <SubmitButton />
+      </StyledSearchForm>
+    </SearchContext.Provider>
   );
 };

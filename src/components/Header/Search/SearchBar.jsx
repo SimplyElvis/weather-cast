@@ -1,4 +1,3 @@
-import React, { useState, useRef } from "react";
 import styled from "styled-components";
 
 import { TitleMed } from "../../Typography.jsx";
@@ -13,6 +12,7 @@ const StyledSearch = styled.section`
   flex-direction: row;
   padding: var(--spacing-base);
   border-radius: var(--border-radius);
+  background-color: var(--color-light);
 
   @media screen and (min-width: ${breakPoint.tablet}) {
     flex-direction: column;

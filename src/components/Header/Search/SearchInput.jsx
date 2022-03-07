@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import styled from "styled-components";
 import { XMark } from "./XMark";
+import { SearchContext } from "../../../contexts/searchContext";
 
 const StyledSearchInput = styled.div`
   width: 100%;
@@ -9,7 +10,7 @@ const StyledSearchInput = styled.div`
   flex-direction: row;
   flex-wrap: no-wrap;
   align-items: center;
-  background-color: var(--color-light);
+  background-color: inherit;
   padding: var(--spacing-base);
   border-radius: var(--border-radius-md);
   border-style: solid;
@@ -28,8 +29,9 @@ const StyledInput = styled.input`
 `;
 
 export const SearchInput = () => {
+  const { searchTerm, setSearchTerm } = useContext(SearchContext);
   const inputRef = useRef();
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
   const [showClearButton, setShowClearButton] = useState(false);
 
   useEffect(() => {
