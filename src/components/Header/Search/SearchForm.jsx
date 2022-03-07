@@ -28,15 +28,6 @@ export const SearchForm = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <StyledSearchForm onSubmit={submitCityName}>
-      <label className="offScreen" htmlFor="search">
-        Enter City Name.
-      </label>
-      <SearchInput />
-      <SubmitButton />
-    </StyledSearchForm>
-=======
     <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
       <StyledSearchForm onSubmit={submitCityName}>
         <label className="offScreen" htmlFor="search">
@@ -46,6 +37,5 @@ export const SearchForm = () => {
         <SubmitButton />
       </StyledSearchForm>
     </SearchContext.Provider>
->>>>>>> dev
   );
 };
