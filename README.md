@@ -5,6 +5,6 @@ Weather data display ReactJs web app using the Open Weather API, framer-motion a
 ### Stacks
 
 - ReactJs
-- Sass
+- styled-components
 - Framer-motion
 - API
