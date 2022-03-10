@@ -1,11 +1,24 @@
-import { useState, useEffect } from "react";
+import { useEffect, useContext } from "react";
+import { ResultContext } from "../contexts/resultContext.js";
 
 export const useFetch = (url) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState("");
-  const [message, setMessage] = useState("");
+  const { setResponse, setIsFetching, setShowCityOptions } =
+    useContext(ResultContext);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (url === "") return;
+    const fetchData = async () => {
+      setIsFetching(true);
+      const response = await fetch(url);
+      if (url.includes("locations")) {
+        setShowCityOptions(true);
+      } else {
+        setShowCityOptions(false);
+      }
+      setResponse(await response.json());
+      setIsFetching(false);
+    };
 
-  return { isLoading, data, message };
+    fetchData();
+  }, [url, setResponse, setShowCityOptions, setIsFetching]);
 };

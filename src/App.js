@@ -1,16 +1,13 @@
-import { useContext, useState } from "react";
+import { ResultContextProvider } from "./contexts/resultContext.js";
 import Wrapper from "./components/Wrapper.jsx";
 import Header from "./components/Header/Header.jsx";
 import { Footer } from "./components/Footer/Footer.jsx";
-import { ResultContext } from "./contexts/resultContext.js";
 
 function App() {
-  const queryData = useContext(ResultContext);
-  const { queryResult, setQueryResult } = useState({});
   return (
     <>
       <main className="main">
-        <ResultContext.Provider value={(queryResult, setQueryResult)}>
+        <ResultContextProvider>
           <Wrapper>
             <Header />
           </Wrapper>
@@ -18,7 +15,7 @@ function App() {
           <Wrapper>
             <Footer />
           </Wrapper>
-        </ResultContext.Provider>
+        </ResultContextProvider>
       </main>
     </>
   );

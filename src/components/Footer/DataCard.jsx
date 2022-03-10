@@ -7,7 +7,7 @@ const StyledDataCard = styled.div`
   min-height: 8em;
   border-radius: var(--border-radius);
   padding: calc(var(--spacing-base) / 3);
-  background-color: hsl(var(--color-accent));
+  background-color: var(--color-light);
   display: flex;
   flex-direction: column;
   // justify-content: center;
