@@ -1,7 +1,10 @@
+import { useContext, useState, useEffect } from "react";
+import { ResultContext } from "../../../contexts/resultContext.js";
 import styled from "styled-components";
+import { CityOptions } from "./CityOptions.jsx";
 import { CityName } from "../../CityName.jsx";
 import { Result } from "./Result.jsx";
-import { breakPoint } from "../../utils/breakPoints.js";
+import { breakPoint } from "../../../utils/breakPoints.js";
 
 const ResultWrapper = styled.section`
   flex-grow: 2;
@@ -23,10 +26,27 @@ const ResultWrapper = styled.section`
 `;
 
 export const ResultBar = () => {
+  const { showCityOptions } = useContext(ResultContext);
+  const [showCities, setShowCities] = useState(false);
+
+  useEffect(() => {
+    if (showCityOptions) {
+      setShowCities(true);
+    } else {
+      setShowCities(false);
+    }
+  }, [showCityOptions]);
+
   return (
     <ResultWrapper>
-      <CityName cityName="Nigeria" countryName="Africa" />
-      <Result />
+      {showCities ? (
+        <CityOptions />
+      ) : (
+        <>
+          <CityName cityName="Nigeria" countryName="Africa" />
+          <Result />
+        </>
+      )}
     </ResultWrapper>
   );
 };

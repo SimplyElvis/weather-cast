@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakPoint } from "./utils/breakPoints";
+import { breakPoint } from "../utils/breakPoints";
 
 const Wrapper = styled.div`
   margin-inline: auto;

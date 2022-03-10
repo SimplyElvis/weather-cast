@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakPoint } from "../utils/breakPoints.js";
+import { breakPoint } from "../../utils/breakPoints.js";
 import { SearchBar } from "./Search/SearchBar.jsx";
 import { ResultBar } from "./Result/ResultBar.jsx";
 

@@ -19,7 +19,7 @@ const StyledMark = styled.div`
 `;
 
 export const XMark = ({ searchTerm, inputRef }) => {
-  const clearSearchTerm = () => {
+  const clearSearchTerm = (event) => {
     searchTerm("");
     inputRef.current.focus();
   };

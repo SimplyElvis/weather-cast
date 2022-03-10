@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { TitleLg, TitleMed } from "../../Typography.jsx";
-import { breakPoint } from "../../utils/breakPoints";
+import { breakPoint } from "../../../utils/breakPoints";
 
 const StyledClock = styled.div`
   flex-grow: 2;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { TitleMed } from "../../Typography.jsx";
 import { SearchForm } from "./SearchForm.jsx";
 import { Clock } from "./Clock.jsx";
-import { breakPoint } from "../../utils/breakPoints.js";
+import { breakPoint } from "../../../utils/breakPoints.js";
 
 const StyledSearch = styled.section`
   flex-grow: 1;

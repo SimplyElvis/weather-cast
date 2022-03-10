@@ -138,6 +138,7 @@ i {
   width: 100vw;
   padding-block: 0.5em;
   min-height: 100vh;
+  position: relative;
 }
 
 .none {
