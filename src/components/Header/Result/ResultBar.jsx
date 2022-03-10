@@ -26,7 +26,7 @@ const ResultWrapper = styled.section`
 `;
 
 export const ResultBar = () => {
-  const { showCityOptions } = useContext(ResultContext);
+  const { showCityOptions, response } = useContext(ResultContext);
   const [showCities, setShowCities] = useState(false);
 
   useEffect(() => {
@@ -36,6 +36,8 @@ export const ResultBar = () => {
       setShowCities(false);
     }
   }, [showCityOptions]);
+
+  console.log(response);
 
   return (
     <ResultWrapper>
