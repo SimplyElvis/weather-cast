@@ -2,11 +2,6 @@ import { ResultContextProvider } from "./contexts/resultContext.js";
 import Wrapper from "./components/Wrapper.jsx";
 import Header from "./components/Header/Header.jsx";
 import { Footer } from "./components/Footer/Footer.jsx";
-<<<<<<< HEAD
-import { ResultContext } from "./contexts/resultContext.js";
-=======
-
->>>>>>> dev
 
 function App() {
   return (
