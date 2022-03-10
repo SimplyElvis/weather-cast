@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import { useFetch } from "../../../hooks/useFetch.js";
 import { ResultContext } from "../../../contexts/resultContext.js";
 import styled from "styled-components";
@@ -55,13 +55,22 @@ export const CityOptions = () => {
   const { response, isFetching, setQueryString, queryString } =
     useContext(ResultContext);
 
-  const vRef = useRef({});
-
   const sendCityFocast = (event) => {
-    setQueryString(
-      `https://genesisrack.herokuapp.com/weather/api/focast?lat=${23.3}&lon=${11.2}&${"delta"}`
-    );
-    console.log(event.target.innerText);
+    let text = event.target.innerText;
+    // Check if string matches values in response array.
+    response.forEach((city) => {
+      if (
+        text.includes(city.name) &&
+        text.includes(city.state) &&
+        text.includes(city.country)
+      ) {
+        setQueryString(
+          `https://genesisrack.herokuapp.com/weather/api/focast?lat=${city.lat}&lon=${city.lon}&state=${city.state}`
+        );
+      } else {
+        return;
+      }
+    });
   };
 
   useFetch(queryString);
@@ -71,8 +80,19 @@ export const CityOptions = () => {
       <div>
         {isFetching === false &&
           response.map((city, index) => (
-            <StyledCityOption key={index} onClick={sendCityFocast} ref={vRef}>
-              {city.name} in {city.state} State in {city.country}
+            <StyledCityOption
+              key={city.lat + city.name}
+              onClick={sendCityFocast}
+            >
+              {city.state ? (
+                <p>
+                  {city.name} in {city.state} State in {city.country} ?
+                </p>
+              ) : (
+                <p>
+                  {city.name} in {city.country} ?
+                </p>
+              )}
             </StyledCityOption>
           ))}
       </div>
