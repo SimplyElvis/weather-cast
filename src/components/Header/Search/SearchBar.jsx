@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { TitleMed } from "../../Typography.jsx";
 import { SearchForm } from "./SearchForm.jsx";
-import { Clock } from "./Clock.jsx";
+// import { Clock } from "./Clock.jsx";
 import { breakPoint } from "../../../utils/breakPoints.js";
 
 const StyledSearch = styled.section`
@@ -26,7 +26,7 @@ const StyledSearch = styled.section`
 export function SearchBar() {
   return (
     <StyledSearch>
-      <Clock />
+      {/* <Clock /> */}
       <TitleMed className="offScreen">Search City Name Entry.</TitleMed>
       <SearchForm role="search" />
     </StyledSearch>

@@ -1,3 +1,5 @@
+import { useContext, useEffect } from "react";
+import { ResultContext } from "../../../contexts/resultContext.js";
 import styled from "styled-components";
 
 const StyledSubmitButton = styled.button`
@@ -25,9 +27,18 @@ const StyledSubmitButton = styled.button`
 `;
 
 export const SubmitButton = () => {
+  const { errorMessage, setErrorMessage } = useContext(ResultContext);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setErrorMessage("Get City Name");
+    }, 3000);
+  }, [errorMessage, setErrorMessage]);
+
   return (
     <StyledSubmitButton type="submit" arial-label="Submit City Name.">
-      <i className="fa-solid fa-magnifying-glass"></i> Get City Name
+      <i className="fa-solid fa-magnifying-glass"></i>{" "}
+      {errorMessage === "" ? "Get City Name" : errorMessage}
     </StyledSubmitButton>
   );
 };
