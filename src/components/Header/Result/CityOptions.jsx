@@ -9,14 +9,14 @@ const StyledCityOptionWrapper = styled.section`
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: transparent; // TODO: change background color.
+  background-color: transparent;
   display: grid;
   place-items: center;
 
-  > div {
+  > div:first-child {
     max-width: 900px;
     padding: var(--spacing-base);
-    background-color: var(--color-background); // TODO: change background-color.
+    background-color: var(--color-amber-light);
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
@@ -27,22 +27,20 @@ const StyledCityOptionWrapper = styled.section`
 `;
 
 const StyledCityOption = styled.div`
-  background-color: white; // TODO: change background color.
-
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
   padding: var(--padding-vertical) var(--padding-horizontal);
   border-radius: var(--border-radius);
   border: solid var(--button-border-width) var(--color-dark);
   box-shadow: 0 var(--button-shadow-width) 0 var(--color-dark);
-  background-color: var(--color-red-03);
+  background-color: var(--color-amber-sa);
   transition: all 50ms ease-in-out;
   margin-bottom: var(--spacing-base-mobile);
   margin-top: 0;
 
   :focus-within,
   :hover {
-    background-color: var(--color-light);
+    background-color: var(--color-red);
   }
   :active {
     margin-bottom: 0;
@@ -59,6 +57,10 @@ export const CityOptions = () => {
     queryString,
     setShowCityOptions,
   } = useContext(ResultContext);
+
+  const hideCityOptions = (event) => {
+    if (event.target.nodeName === "SECTION") setShowCityOptions(false);
+  };
 
   const sendCityFocast = async (event) => {
     event.preventDefault();
@@ -83,7 +85,7 @@ export const CityOptions = () => {
   useFetch(queryString);
 
   return (
-    <StyledCityOptionWrapper>
+    <StyledCityOptionWrapper onClick={hideCityOptions}>
       <div>
         {isFetching === false &&
           response.map((city, index) => (

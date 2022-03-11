@@ -13,6 +13,6 @@ export const CardWrapper = styled.div`
   overflow: hidden;
 
   @media screen and (min-width: ${breakPoint.laptop}) {
-    justify-content: left;
+    justify-content: space-evenly;
   }
 `;

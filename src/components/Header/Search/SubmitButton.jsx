@@ -10,14 +10,14 @@ const StyledSubmitButton = styled.button`
   border-radius: var(--border-radius);
   border: solid var(--button-border-width) var(--color-dark);
   box-shadow: 0 var(--button-shadow-width) 0 var(--color-dark);
-  background-color: var(--color-red-03);
+  background-color: var(--color-amber);
   transition: all 50ms ease-in-out;
   margin-bottom: var(--spacing-base-mobile);
   margin-top: 0;
 
   :focus-within,
   :hover {
-    background-color: var(--color-light);
+    background-color: var(--color-amber-light);
   }
   :active {
     margin-bottom: 0;
