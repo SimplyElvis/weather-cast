@@ -7,7 +7,7 @@ const StyledResult = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 
   @media screen and (min-width: ${breakPoint.tablet}) {
