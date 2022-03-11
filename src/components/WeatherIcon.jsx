@@ -3,7 +3,6 @@ import styled from "styled-components";
 const StyledWeatherIcon = styled.div`
   flex-grow: 1;
   padding: calc(var(--spacing-base) / 2);
-  background-color: pink;
   max-width: 80%;
   min-height: 4em;
 
@@ -13,10 +12,10 @@ const StyledWeatherIcon = styled.div`
   }
 `;
 
-export const WeatherIcon = () => {
+export const WeatherIcon = ({ imgUrl }) => {
   return (
     <StyledWeatherIcon>
-      <img src="" alt="weather icon" />
+      {imgUrl !== undefined && <img src={imgUrl} alt="weather icon" />}
     </StyledWeatherIcon>
   );
 };

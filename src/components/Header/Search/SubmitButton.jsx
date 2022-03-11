@@ -27,7 +27,8 @@ const StyledSubmitButton = styled.button`
 `;
 
 export const SubmitButton = () => {
-  const { errorMessage, setErrorMessage } = useContext(ResultContext);
+  const { errorMessage, setErrorMessage, isFetching } =
+    useContext(ResultContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -37,8 +38,13 @@ export const SubmitButton = () => {
 
   return (
     <StyledSubmitButton type="submit" arial-label="Submit City Name.">
-      <i className="fa-solid fa-magnifying-glass"></i>{" "}
-      {errorMessage === "" ? "Get City Name" : errorMessage}
+      <i className="fa-solid fa-magnifying-glass"></i>
+      {isFetching
+        ? "Fetching"
+        : errorMessage === ""
+        ? "Get City Name"
+        : errorMessage}
+      {/* {} */}
     </StyledSubmitButton>
   );
 };
