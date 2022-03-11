@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { TitleLg, TitleMed } from "../../Typography.jsx";
 import { breakPoint } from "../../../utils/breakPoints";
@@ -17,20 +16,10 @@ const StyledClock = styled.div`
 `;
 
 export const Clock = () => {
-  // const [hour, setHour] = useState("");
-  // const [minute, setMinute] = useState("");
-  // const [day, setDay] = useState("");
-  // const date = new Date();
-
-  // useEffect(() => {
-  //   setHour(date.getHours());
-  //   setMinute(date.getMinutes());
-  //   setDay(date.getFullYear());
-  // }, [date]);
   return (
     <StyledClock>
-      <TitleLg>223: 23</TitleLg>
-      <TitleMed>sun: 23</TitleMed>
+      <TitleLg>{"time"}</TitleLg>
+      <TitleMed>{"date | day"}</TitleMed>
     </StyledClock>
   );
 };

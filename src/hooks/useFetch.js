@@ -26,5 +26,5 @@ export const useFetch = (url) => {
     };
 
     fetchData();
-  }, [url, setResponse, setShowCityOptions, setIsFetching]);
+  }, [url, setResponse, setShowCityOptions, setIsFetching, setErrorMessage]);
 };
