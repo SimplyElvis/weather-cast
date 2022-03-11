@@ -131,11 +131,16 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: var(--spacing-base);
+  gap: var(--spacing-base-mobile);
   width: 100vw;
   padding-block: 0.5em;
   min-height: 100vh;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    gap: var(--spacing-base);
+  }
 }
 
 .none {
