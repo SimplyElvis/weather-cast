@@ -7,6 +7,7 @@ export const ResultContextProvider = ({ children }) => {
   const [response, setResponse] = useState({});
   const [isFetching, setIsFetching] = useState(false);
   const [showCityOptions, setShowCityOptions] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   return (
     <ResultContext.Provider
@@ -19,6 +20,8 @@ export const ResultContextProvider = ({ children }) => {
         setIsFetching,
         showCityOptions,
         setShowCityOptions,
+        errorMessage,
+        setErrorMessage,
       }}
     >
       {children}
