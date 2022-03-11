@@ -37,15 +37,16 @@ export const ResultBar = () => {
     }
   }, [showCityOptions]);
 
-  console.log(response);
-
   return (
     <ResultWrapper>
       {showCities ? (
         <CityOptions />
       ) : (
         <>
-          <CityName cityName="Nigeria" countryName="Africa" />
+          <CityName
+            cityName={response.name}
+            countryName={response.state === "undefined" ? " " : response.state}
+          />
           <Result />
         </>
       )}
