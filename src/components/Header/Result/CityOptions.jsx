@@ -52,23 +52,30 @@ const StyledCityOption = styled.div`
 `;
 
 export const CityOptions = () => {
-  const { response, isFetching, setQueryString, queryString } =
-    useContext(ResultContext);
+  const {
+    response,
+    isFetching,
+    setQueryString,
+    queryString,
+    setShowCityOptions,
+  } = useContext(ResultContext);
 
-  const sendCityFocast = (event) => {
+  const sendCityFocast = async (event) => {
+    event.preventDefault();
     let text = event.target.innerText;
     // Check if string matches values in response array.
-    response.forEach((city) => {
+    await response.forEach((city) => {
       if (
-        text.includes(city.name) &&
-        text.includes(city.state) &&
-        text.includes(city.country)
+        (text.includes(city.name) && text.includes(city.country)) ||
+        (text.includes(city.name) &&
+          text.includes(city.country) &&
+          text.includes(city.state))
       ) {
         setQueryString(
           `https://genesisrack.herokuapp.com/weather/api/focast?lat=${city.lat}&lon=${city.lon}&state=${city.state}`
         );
       } else {
-        return;
+        setShowCityOptions(false);
       }
     });
   };
@@ -80,10 +87,7 @@ export const CityOptions = () => {
       <div>
         {isFetching === false &&
           response.map((city, index) => (
-            <StyledCityOption
-              key={city.lat + city.name}
-              onClick={sendCityFocast}
-            >
+            <StyledCityOption key={city.lat + index} onClick={sendCityFocast}>
               {city.state ? (
                 <p>
                   {city.name} in {city.state} State in {city.country} ?
