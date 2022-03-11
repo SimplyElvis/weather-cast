@@ -11,7 +11,7 @@ const StyledFooter = styled.section`
   gap: calc(var(--spacing-base) / 2);
   padding: calc(var(--spacing-base) / 2);
   border-radius: var(--border-radius);
-  background-color: var(--color-background);
+  background-color: var(--color-light);
 
   @media screen and (min-width: ${breakPoint.tablet}) {
     border-radius: var(--border-radius-md);

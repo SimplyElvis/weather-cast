@@ -2,16 +2,13 @@
 /* Variables         */
 /* ----------------- */
 :root {
-  --color-red-00: #ef5778;
-  --color-red-01: #ee4469;
-  --color-red-02: #ec325a;
-  --color-red-03: #ea1744;
-  --color-red-04: #e01541;
-  --color-red-05: #cd133b;
-  --color-red-06: #bb1136;
-  --color-dark: #161925;
-  --color-light: #fdfffc;
-  --color-background: #fef9ef;
+  --color-dark: #141414;
+  --color-light: #ffffff;
+  --color-background: #262626;
+  --color-amber: #acbfa4;
+  --color-amber-light: #e2e8ce;
+  --color-red: #ff1b1c;
+  --color-amber-sa: #ff7f11;
 
   --viewport-tablet: 48rem;
   --viewport-laptop: 72rem;
