@@ -7,8 +7,8 @@ const StyledHeader = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 50vh;
-  max-height: 60vh;
+  height: 50vh;
+  // height: 60vh;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-base-mobile);
