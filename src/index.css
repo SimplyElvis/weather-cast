@@ -72,7 +72,7 @@ html {
 
 body {
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   font-family: "Source Sans Pro", sans-serif;
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
@@ -130,14 +130,14 @@ i {
 .main {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-base-mobile);
-  width: 100vw;
+  gap: var(--spacing-base);
+  width: inherit;
   padding-block: 0.5em;
   min-height: 100vh;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .main {
-    gap: var(--spacing-base);
+    gap: var(--spacing-base-mobile);
   }
 }
