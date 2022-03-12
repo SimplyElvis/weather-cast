@@ -7,6 +7,7 @@ import { DataCard } from "./DataCard";
 const StyledFooter = styled.section`
   width: 100%;
   display: flex;
+  min-height: 40vh;
   flex-direction: column;
   gap: calc(var(--spacing-base) / 2);
   padding: calc(var(--spacing-base) / 2);
