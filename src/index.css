@@ -130,7 +130,6 @@ i {
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: var(--spacing-base-mobile);
   width: 100vw;
   padding-block: 0.5em;
@@ -141,12 +140,4 @@ i {
   .main {
     gap: var(--spacing-base);
   }
-}
-
-.none {
-  display: none;
-}
-
-.invisible {
-  visibility: hidden;
 }
