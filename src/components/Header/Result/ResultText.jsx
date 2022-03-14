@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ResultContext } from "../../../contexts/resultContext.js";
 import styled from "styled-components";
-import { TitleLg, TextBold, Text } from "../../Typography";
+import { TitleLg, TextBold } from "../../Typography";
 
 const StyledResultText = styled.div`
   flex-grow: 1;
