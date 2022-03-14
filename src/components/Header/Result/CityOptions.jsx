@@ -74,7 +74,7 @@ export const CityOptions = () => {
           text.includes(city.state))
       ) {
         setQueryString(
-          `https://genesisrack.herokuapp.com/weather/api/focast?lat=${city.lat}&lon=${city.lon}&state=${city.state}`
+          `https://genesisrack.herokuapp.com/weather/api/forecast?lat=${city.lat}&lon=${city.lon}&state=${city.state}`
         );
       } else {
         setShowCityOptions(false);
