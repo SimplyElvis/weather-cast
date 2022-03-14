@@ -7,7 +7,7 @@ const StyledHeader = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   // height: 60vh;
   align-items: center;
   justify-content: center;

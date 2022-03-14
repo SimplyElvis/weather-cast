@@ -62,7 +62,7 @@ export const CityOptions = () => {
     if (event.target.nodeName === "SECTION") setShowCityOptions(false);
   };
 
-  const sendCityFocast = async (event) => {
+  const sendCityForecast = async (event) => {
     event.preventDefault();
     let text = event.target.innerText;
     // Check if string matches values in response array.
@@ -89,7 +89,7 @@ export const CityOptions = () => {
       <div>
         {isFetching === false &&
           response.map((city, index) => (
-            <StyledCityOption key={city.lat + index} onClick={sendCityFocast}>
+            <StyledCityOption key={city.lat + index} onClick={sendCityForecast}>
               {city.state ? (
                 <p>
                   {city.name} in {city.state} State in {city.country} ?
