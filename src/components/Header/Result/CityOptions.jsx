@@ -16,8 +16,9 @@ const StyledCityOptionWrapper = styled.section`
   > div:first-child {
     max-width: 900px;
     padding: var(--spacing-base);
-    background-color: var(--color-amber-light);
+    background-color: var(--color-grey);
     border-radius: var(--border-radius);
+    border: solid 2px var(--color-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,14 +34,14 @@ const StyledCityOption = styled.div`
   border-radius: var(--border-radius);
   border: solid var(--button-border-width) var(--color-dark);
   box-shadow: 0 var(--button-shadow-width) 0 var(--color-dark);
-  background-color: var(--color-amber-sa);
+  background-color: var(--color-azure);
   transition: all 50ms ease-in-out;
   margin-bottom: var(--spacing-base-mobile);
   margin-top: 0;
 
   :focus-within,
   :hover {
-    background-color: var(--color-red);
+    background-color: var(--color-grey);
   }
   :active {
     margin-bottom: 0;

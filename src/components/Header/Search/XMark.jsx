@@ -7,7 +7,7 @@ const StyledMark = styled.div`
 
   :hover,
   :focus-within {
-    color: var(--color-red);
+    color: red;
     cursor: pointer;
   }
 
