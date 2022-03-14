@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ResultContext } from "../../../contexts/resultContext.js";
 import styled from "styled-components";
-import { TitleLg, TextBold } from "../../Typography";
+import { TitleLg, TextBold, Text } from "../../Typography";
 
 const StyledResultText = styled.div`
   flex-grow: 1;
@@ -22,6 +22,10 @@ export const ResultText = () => {
           <TextBold>Description: {weather[0].description}</TextBold>
           <TextBold>Humidity: {main.humidity}%</TextBold>
           <TextBold>Pressure: {main.pressure}hPa</TextBold>
+          <TextBold>
+            Feels like: {main.feels_like}
+            <span>&deg;C</span>
+          </TextBold>
         </>
       )}
     </StyledResultText>
