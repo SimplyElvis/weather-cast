@@ -17,7 +17,7 @@ const StyledSubmitButton = styled.button`
 
   :focus-within,
   :hover {
-    background-color: var(--color-grey);
+    background-color: var(--color-hover);
   }
   :active {
     margin-bottom: 0;
