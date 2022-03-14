@@ -8,7 +8,8 @@ const StyledCityName = styled.div`
   place-content: center;
   background-color: var(--color-dark);
   border-radius: var(--border-radius);
-  color: var(--color-amber);
+  color: var(--color-light);
+  background-color: var(--color-dark);
 
   @media screen and (min-width: ${breakPoint.tablet}) {
     border-radius: var(--border-radius-md);

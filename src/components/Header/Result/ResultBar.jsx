@@ -14,7 +14,8 @@ const ResultWrapper = styled.section`
   justify-content: flex-start;
   padding: var(--spacing-base);
   border-radius: var(--border-radius);
-  background-color: var(--color-light);
+  background-color: var(--color-grey);
+  color: var(--color-dark);
 
   @media screen and (min-width: ${breakPoint.tablet}) {
     border-radius: var(--border-radius-md);

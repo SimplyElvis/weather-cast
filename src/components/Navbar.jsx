@@ -8,7 +8,8 @@ const StyledNav = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-amber);
+  background-color: var(--color-dark);
+  color: var(--color-light);
   border-radius: var(--border-radius);
   padding: var(--spacing-base-mobile);
 `;

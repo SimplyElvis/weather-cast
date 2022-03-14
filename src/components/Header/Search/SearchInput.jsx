@@ -10,7 +10,7 @@ const StyledSearchInput = styled.div`
   flex-direction: row;
   flex-wrap: no-wrap;
   align-items: center;
-  background-color: inherit;
+  background-color: var(--color-light);
   padding: var(--spacing-base);
   border-radius: var(--border-radius-md);
   border-style: solid;

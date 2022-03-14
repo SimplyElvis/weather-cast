@@ -12,7 +12,7 @@ const StyledSearch = styled.section`
   flex-direction: row;
   padding: var(--spacing-base);
   border-radius: var(--border-radius);
-  background-color: var(--color-light);
+  background-color: var(--color-grey);
 
   @media screen and (min-width: ${breakPoint.tablet}) {
     flex-direction: column;
