@@ -30,7 +30,7 @@ export const SearchForm = () => {
     event.preventDefault();
     if (searchTerm === "") return;
     setQueryString(
-      `https://genesisrack.herokuapp.com/weather/api/locations?q=${searchTerm
+      `https://genesisrack.herokuapp.com/api/weather/locations?q=${searchTerm
         .trim()
         .toLowerCase()}`
     );
